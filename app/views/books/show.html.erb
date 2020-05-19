@@ -1,5 +1,5 @@
 <div class = "book">
-	<%= content_tag :sapn , "#{@book.name}" , ("#{@book.author}"), class: "book-title " %>
+	<%= content_tag :span, "#{@book.name} (#{@book.author})", class: "book-title" %>
 	<%= link_to 'Edit', edit_book_path(@book) %>
 	
 
@@ -16,16 +16,16 @@
 
 <%= form_for([@book, @book.notes.new]) do |f| %>
 <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :note %>
-    <%= form.text_field :note %>
+    <%= f.label :note %>
+    <%= f.text_field :note %>
 
   <div class="actions">
-    <%= form.submit "Add new note" %>
+    <%= f.submit "Add new note" %>
   </div>
   <% end %>
 </div>
