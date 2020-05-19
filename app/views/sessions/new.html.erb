@@ -1,0 +1,16 @@
+<%= form_for(:reviewer, url: sessions_path) do |f| %>
+
+  <div class="field">
+    <%= f.label :email %> <br/>
+    <%= f.text_field :email %>
+  </div>
+  <p/>
+  <div class="field">
+    <%= f.label :password %> <br/>
+    <%= f.password_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Login" %>
+  </div>
+  
+<% end %>
